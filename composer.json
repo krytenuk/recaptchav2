@@ -3,11 +3,11 @@
     "description": "ZF2 module for using Google reCaptcha version 2",
     "require": {
         "php": ">=5.5.0",
-        "zendframework/zend-form": "^2.5.0",
-        "zendframework/zend-view": "^2.5.0",
-        "zendframework/zend-validator": "^2.5.0",
-        "zendframework/zend-stdlib": "^2.5.0",
-        "zendframework/zend-http": "^2.5.0"
+        "zendframework/zend-form": "^2.3.0",
+        "zendframework/zend-view": "^2.3.0",
+        "zendframework/zend-validator": "^2.3.0",
+        "zendframework/zend-stdlib": "^2.3.0",
+        "zendframework/zend-http": "^2.3.0"
     },
     "authors": [{
             "name": "Garry Childs",
