@@ -24,7 +24,7 @@ Installation
 
     ```json
     "require": {
-        "krytenuk/recaptchav2": "1.*"
+        "krytenuk/recaptchav2": "1.0.*"
     }
     ```
 
