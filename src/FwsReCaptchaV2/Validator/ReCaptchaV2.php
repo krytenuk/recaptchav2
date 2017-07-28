@@ -1,10 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 namespace FwsReCaptchaV2\Validator;
 
 use Zend\Validator\AbstractValidator;
@@ -16,6 +11,11 @@ use Zend\Http\Request;
 use Zend\Http\Client\Adapter\Curl;
 use Zend\Http\PhpEnvironment\RemoteAddress;
 
+/**
+ * Recaptcha V2 validator
+ *
+ * @author Garry Childs (Freedom Web Services)
+ */
 class ReCaptchaV2 extends AbstractValidator
 {
 

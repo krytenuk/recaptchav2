@@ -1,9 +1,11 @@
-FwsLogger
+FwsReCaptchaV2
 ============
+
+Docs now available [online](https://www.freedomwebservices.net/zend-framework/fws-recaptcha).
 
 ZF2 Google ReCaptcha version 2 form element, view helper and validator module
 
-This module simplifies intergrating ReCaptcha V2 in your forms.
+This module simplifies integrating ReCaptcha V2 in your forms.
 
 Note: The view helper requires jQuery.
 
