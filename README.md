@@ -3,7 +3,7 @@ FwsReCaptchaV2
 
 Docs now available [online](https://www.freedomwebservices.net/zend-framework/fws-recaptcha).
 
-ZF2 Google ReCaptcha version 2 form element, view helper and validator module
+ZF3 Google ReCaptcha version 2 form element, view helper and validator module
 
 This module simplifies integrating ReCaptcha V2 in your forms.
 
@@ -14,19 +14,13 @@ Installation
 
 ### Main Setup
 
-#### By cloning project
-
-1. Install [FwsReCaptchaV2](https://github.com/krytenuk/recaptchav2) ZF2 module
-   by cloning it into `./vendor/`.
-2. Clone this project into your `./vendor/` directory.
-
 #### With composer
 
 1. Add this project in your composer.json:
 
     ```json
     "require": {
-        "krytenuk/recaptchav2": "1.0.*"
+        "krytenuk/recaptchav2": "2.0.*"
     }
     ```
 
@@ -38,15 +32,12 @@ Installation
 
 #### Post installation
 
-1. Enabling it in your `application.config.php` file.
+1. Enabling it in your `modules.config.php` file.
 
     ```php
     <?php
-    return array(
-        'modules' => array(
-            // ...
-            'FwsReCaptchaV2',
-        ),
+    return [
+        'FwsReCaptchaV2',
         // ...
     );
     ```

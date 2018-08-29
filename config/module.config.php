@@ -1,26 +1,36 @@
 <?php
 
+use Zend\ServiceManager\Factory\InvokableFactory;
+use FwsReCaptchaV2\Validator\ReCaptchaV2 as ReCaptchaV2Validator;
+use FwsReCaptchaV2\Form\Element\ReCaptchaV2 as ReCaptchaV2FormElement;
+use FwsReCaptchaV2\Form\View\Helper\FormReCaptchaV2;
+use Zend\Form\View\Helper\FormElement;
+use FwsReCaptchaV2\Form\View\Helper\Service\FormElementFactory;
+
 return [
     'validators' => [
-        'invokables' => [
-            'FwsReCaptchaV2' => 'FwsReCaptchaV2\Validator\ReCaptchaV2',
+        'factories' => [
+            ReCaptchaV2Validator::class => InvokableFactory::class,
+        ],
+        'aliases' => [
+            'FwsReCaptchaV2' => ReCaptchaV2Validator::class,
         ],
     ],
     'form_elements' => [
-        'invokables' => [
-            'FwsReCaptchaV2' => 'FwsReCaptchaV2\Form\Element\ReCaptchaV2',
+        'factories' => [
+            ReCaptchaV2FormElement::class => InvokableFactory::class,
+        ],
+        'aliases' => [
+            'FwsReCaptchaV2' => ReCaptchaV2FormElement::class,
         ],
     ],
     'view_helpers' => [
-        'invokables' => [
-            'formFwsReCaptchaV2' => 'FwsReCaptchaV2\Form\View\Helper\FormReCaptchaV2',
-        ],
         'factories' => [
-            'formElement' => function($serviceManager) {
-                $helper = $serviceManager->get('Zend\Form\View\Helper\FormElement');
-                $helper->addClass('FwsReCaptchaV2\Form\Element\ReCaptchaV2', 'formFwsReCaptchaV2');
-                return $helper;
-            }
+            FormReCaptchaV2::class => InvokableFactory::class,
+            FormElement::class => FormElementFactory::class,
+        ],
+        'aliases' => [
+            'formFwsReCaptchaV2' => FormReCaptchaV2::class,
         ],
     ],
 ];
