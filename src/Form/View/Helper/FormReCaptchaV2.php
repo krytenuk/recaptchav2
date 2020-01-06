@@ -7,8 +7,8 @@
  */
 namespace FwsReCaptchaV2\Form\View\Helper;
 
-use Zend\View\Helper\AbstractHelper;
-use Zend\Form\ElementInterface;
+use Laminas\View\Helper\AbstractHelper;
+use Laminas\Form\ElementInterface;
 use Exception;
 
 class FormReCaptchaV2 extends AbstractHelper

@@ -1,10 +1,10 @@
 <?php
 
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 use FwsReCaptchaV2\Validator\ReCaptchaV2 as ReCaptchaV2Validator;
 use FwsReCaptchaV2\Form\Element\ReCaptchaV2 as ReCaptchaV2FormElement;
 use FwsReCaptchaV2\Form\View\Helper\FormReCaptchaV2;
-use Zend\Form\View\Helper\FormElement;
+use Laminas\Form\View\Helper\FormElement;
 use FwsReCaptchaV2\Form\View\Helper\Service\FormElementFactory;
 
 return [

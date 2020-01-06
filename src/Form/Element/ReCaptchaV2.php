@@ -2,7 +2,7 @@
 
 namespace FwsReCaptchaV2\Form\Element;
 
-use Zend\Form\Element;
+use Laminas\Form\Element;
 
 class ReCaptchaV2 extends Element
 {

@@ -2,11 +2,11 @@
 
 namespace FwsReCaptchaV2\Form\View\Helper\Service;
 
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 use FwsReCaptchaV2\Form\Element\ReCaptchaV2 as ReCaptchaV2FormElement;
 use FwsReCaptchaV2\Form\View\Helper\FormReCaptchaV2;
-use Zend\Form\View\Helper\FormElement;
+use Laminas\Form\View\Helper\FormElement;
 
 /**
  * FormElementFactory

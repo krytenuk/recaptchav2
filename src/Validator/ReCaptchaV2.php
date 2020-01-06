@@ -2,14 +2,14 @@
 
 namespace FwsReCaptchaV2\Validator;
 
-use Zend\Validator\AbstractValidator;
+use Laminas\Validator\AbstractValidator;
 use Traversable;
 use Exception;
-use Zend\Stdlib\ArrayUtils;
-use Zend\Http\Client;
-use Zend\Http\Request;
-use Zend\Http\Client\Adapter\Curl;
-use Zend\Http\PhpEnvironment\RemoteAddress;
+use Laminas\Stdlib\ArrayUtils;
+use Laminas\Http\Client;
+use Laminas\Http\Request;
+use Laminas\Http\Client\Adapter\Curl;
+use Laminas\Http\PhpEnvironment\RemoteAddress;
 
 /**
  * Recaptcha V2 validator
