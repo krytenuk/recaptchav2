@@ -128,19 +128,36 @@ class ReCaptchaV2 extends AbstractValidator
             throw new Exception(sprintf('Options need to be an array or Traversable, %s given', gettype($options)));
         }
 
+        parent::__construct($options);
+    }
+    
+    public function setOptions($options = [])
+    {
         if (isset($options['apiUrl'])) {
             $this->setApiUrl($options['apiUrl']);
+            unset($options['apiUrl']);
+        } elseif (isset($options['api_url'])) {
+            $this->setApiUrl($options['api_url']);
+            unset($options['api_url']);
         }
 
         if (isset($options['priKey'])) {
             $this->setPriKey($options['priKey']);
+            unset($options['priKey']);
+        } elseif (isset($options['pri_key'])) {
+            $this->setPriKey($options['pri_key']);
+            unset($options['pri_key']);
         }
 
         if (isset($options['userIPAddress'])) {
             $this->setUserIPAddress($options['userIPAddress']);
+            unset($options['userIPAddress']);
+        } elseif (isset($options['user_ip_address'])) {
+            $this->setUserIPAddress($options['user_ip_address']);
+            unset($options['user_ip_address']);
         }
-
-        parent::__construct();
+        
+        return parent::setOptions($options);
     }
 
     /**

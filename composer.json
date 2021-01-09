@@ -1,6 +1,6 @@
 {
     "name": "krytenuk/recaptchav2",
-    "description": "Zend Framework module for using Google reCaptcha version 2",
+    "description": "Laminas/Zend Framework module for using Google reCaptcha version 2",
     "require": {
         "php": "^5.6 || ^7.0",
         "laminas/laminas-form": "^2.12",
@@ -14,7 +14,7 @@
             "email": "info@freedomwebservices.net",
             "homepage": "https://www.freedomwebservices.net/"
         }],
-    "keywords": ["zf3", "recaptcha", "google", "freedom"],
+    "keywords": ["Laminas", "zf3", "recaptcha", "google", "freedom"],
     "autoload": {
         "psr-4": {
             "FwsReCaptchaV2\\": "src/"

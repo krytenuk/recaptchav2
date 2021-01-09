@@ -209,35 +209,48 @@ class ReCaptchaV2 extends Element
      */
     public function setOptions($options)
     {
-        parent::setOptions($options);
-
         if (isset($options['pubKey'])) {
             $this->setPubKey($options['pubKey']);
+            unset($options['pubKey']);
+        } elseif (isset($options['pub_key'])) {
+            $this->setPubKey($options['pub_key']);
+            unset($options['pub_key']);
         }
 
         if (isset($options['tag'])) {
             $this->setTag($options['tag']);
+            unset($options['tag']);
         }
 
         if (isset($options['reCaptchaClass'])) {
             $this->setReCaptchaClass($options['reCaptchaClass']);
+            unset($options['reCaptchaClass']);
+        } elseif (isset($options['re_captcha_class'])) {
+            $this->setReCaptchaClass($options['re_captcha_class']);
+            unset($options['re_captcha_class']);
         }
 
         if (isset($options['theme'])) {
             $this->setTheme($options['theme']);
+            unset($options['theme']);
         }
 
         if (isset($options['type'])) {
             $this->setType($options['type']);
+            unset($options['type']);
         }
 
         if (isset($options['size'])) {
             $this->setSize($options['size']);
+            unset($options['size']);
         }
 
         if (isset($options['tabindex'])) {
             $this->setTabindex($options['tabindex']);
+            unset($options['tabindex']);
         }
+        
+        return parent::setOptions($options);
     }
 
 }
