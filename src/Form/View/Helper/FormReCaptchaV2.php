@@ -40,7 +40,7 @@ class FormReCaptchaV2 extends AbstractHelper
             throw new Exception('ReCapthcha public key not set');
         }
 
-        return $this->getJQuery($element) . PHP_EOL . $this->getHtmlContainer($element) . PHP_EOL . $this->getHiddenElement($element) . PHP_EOL;
+        return $this->getJs($element) . PHP_EOL . $this->getHtmlContainer($element) . PHP_EOL . $this->getHiddenElement($element) . PHP_EOL;
     }
 
     /**
@@ -82,7 +82,7 @@ class FormReCaptchaV2 extends AbstractHelper
      * @param ElementInterface $element
      * @return string
      */
-    private function getJQuery(ElementInterface $element)
+    private function getJs(ElementInterface $element)
     {
         $options = [
             'sitekey' => '"' . $element->getPubKey() . '"',
@@ -103,13 +103,13 @@ class FormReCaptchaV2 extends AbstractHelper
         return '<script type="text/javascript">' . PHP_EOL
                 . 'var onloadCallback = function() {' . PHP_EOL
                 . 'grecaptcha.render("' . $element->getName() . '_container", {'
-                . $this->getJQueryObject($options)
+                . $this->getJsObject($options)
                 . '})' . PHP_EOL
                 . '};' . PHP_EOL
                 . '</script>' . PHP_EOL
                 . '<script type="text/javascript">' . PHP_EOL
                 . 'var verifyCallback = function() {' . PHP_EOL
-                . '$("#' . $element->getName() . '").val(grecaptcha.getResponse());' . PHP_EOL
+                . 'document.getElementById("' . $element->getName() . '").value = grecaptcha.getResponse();' . PHP_EOL
                 . '};' . PHP_EOL
                 . '</script>' . PHP_EOL
                 . '<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>';
@@ -120,13 +120,13 @@ class FormReCaptchaV2 extends AbstractHelper
      * @param array $options
      * @return string
      */
-    private function getJQueryObject(Array $options)
+    private function getJsObject(Array $options)
     {
         $objectString = '';
         foreach ($options as $key => $option) {
-            $objectString .= $key . ' : ' . $option . ',' . PHP_EOL;
+            $objectString .= sprintf('%s: %s, ', $key, $option);
         }
-        return $objectString;
+        return $objectString . PHP_EOL;
     }
 
     /**

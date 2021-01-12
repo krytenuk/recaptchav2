@@ -149,12 +149,12 @@ class ReCaptchaV2 extends AbstractValidator
             unset($options['pri_key']);
         }
 
-        if (isset($options['userIPAddress'])) {
-            $this->setUserIPAddress($options['userIPAddress']);
-            unset($options['userIPAddress']);
-        } elseif (isset($options['user_ip_address'])) {
-            $this->setUserIPAddress($options['user_ip_address']);
-            unset($options['user_ip_address']);
+        if (isset($options['sendIPAddress'])) {
+            $this->setSendIpAddress($options['sendIPAddress']);
+            unset($options['sendIPAddress']);
+        } elseif (isset($options['send_ip_address'])) {
+            $this->setSendIpAddress($options['send_ip_address']);
+            unset($options['send_ip_address']);
         }
         
         return parent::setOptions($options);
