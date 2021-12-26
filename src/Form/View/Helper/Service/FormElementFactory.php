@@ -3,7 +3,7 @@
 namespace FwsReCaptchaV2\Form\View\Helper\Service;
 
 use Laminas\ServiceManager\Factory\FactoryInterface;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use FwsReCaptchaV2\Form\Element\ReCaptchaV2 as ReCaptchaV2FormElement;
 use FwsReCaptchaV2\Form\View\Helper\FormReCaptchaV2;
 use Laminas\Form\View\Helper\FormElement;
