@@ -2,7 +2,7 @@
     "name": "krytenuk/recaptchav2",
     "description": "Laminas/Zend Framework module for using Google reCaptcha version 2",
     "require": {
-        "php": "^7.0 || ~8.0.0 || ~8.1.0",
+        "php": "~8.2.0",
         "laminas/laminas-form": "^3.1",
         "laminas/laminas-view": "^2.13",
         "laminas/laminas-validator": "^2.15",
